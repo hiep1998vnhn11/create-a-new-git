@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Introduction</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   
+</head>
+<body>
+    <div id="app">
+        <p>{{ title}}</p>
+    </div>
+            
+    <div id="app-2">
+        <span v-bind:title="message">
+          Rê chuột lên đây một vài giây để xem thuộc tính `title` được bind!
+        </span>
+    </div>
+
+    <div id="bindTitle">
+        <span v-bind:title="message">
+            <br />To Hello Here!
+        </span>
+    </div>
+
+    <div id="ifIntro">
+        <span v-if="isSeen">
+            <br /> If the isSeen in ifIntro = true, this text will show you!
+        </span>
+    </div>
+
+    <div id="forIntro">
+        <script>forIntro.views.push({ text: 'Text 4'})</script>
+        <ol>
+            
+            <li v-for="view in views">
+                {{view.text}}
+            </li>
+        </ol>
+       
+    </div>
+
+    <div id="onclickIntro">
+        <p>{{message1}}</p>
+            <button v-on:click="reverseMessage"> Reverse</button>
+        <p>{{message2}}</p>
+            <button v-on:click="notMessage"> click Here!</button>
+    </div>
+
+    <div id="inputEditIntro">
+        <p> {{ message }}</p>
+        <input v-model="message">
+    </div>
+    
+</body>
+<script src="main.js"></script>
+</html>
